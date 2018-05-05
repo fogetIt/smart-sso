@@ -1,0 +1,35 @@
+{
+  "name": "apidoc",
+  "version": "1.0.1",
+  "description": "api文档",
+  "main": "",
+  "scripts": {
+    "setup": "npm i --registry=https://registry.npm.taobao.org",
+    "doc": "apidoc -i ./controller/ -o ./doc/",
+    "doc:server": "npm run doc && http-server ./doc/ -p 5000 >/dev/null 2>&1 &"
+  },
+  "keywords": [
+    "apidoc"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:forgrtIt/smart-sso.git"
+  },
+  "author": "zdd",
+  "license": "ISC",
+  "dependencies": {
+    "apidoc": "^0.17.6",
+    "http-server": "^0.10.0"
+  },
+  "devDependencies": {
+    "apidoc": "^0.17.6",
+    "http-server": "^0.10.0"
+  },
+  "apidoc": {
+    "name": "smart-sso doc",
+    "version": "1.0.0",
+    "description": "sso restful API doc",
+    "title": "API",
+    "url": "http://localhost:7654/api/v1"
+  }
+}

@@ -1,0 +1,17 @@
+{% extends 'admin/master.html' %}
+{% block body %}
+<div style="margin:0 auto; margin-top: 150px; width:600px; height:100px; border:0; text-align: center">
+    {% if current_user.is_authenticated %}
+    <h3>
+        Hello {{ name | capitalize | default('Admin') }}
+    </h3>
+    {% else %}
+    <form method="POST" action="">
+        {{ form.id.label }} {{ form.id(size=20) }}
+        {{ form.password.label }} {{ form.password(size=20) }}
+        <br/>
+        <input type="submit" value="Go">
+    </form>
+    {% endif %}
+</div>
+{% endblock %}

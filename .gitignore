@@ -1,0 +1,12 @@
+.idea/
+node_modules/
+doc/
+venv/
+__pycache__/
+
+unit_test.py
+common/config.py
+
+package-lock.json
+*.pyc
+*.log
